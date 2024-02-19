@@ -11,6 +11,9 @@ const obj:Juice={
 };
 console.log(obj);
 
+//省略されたプロパティを参照するとundefinedが返される
+console.log(obj.flavor);
+
 //必要であれば、オブジェクトに初期値を代入した後にプロパティを追加することができる。
 obj.flavor = "りんご味";
 console.log(obj);
