@@ -19,3 +19,7 @@ const{
 console.log(meetName);//->高級肉
 console.log(base);    //->1280
 console.log(discount);//->1000
+
+/*meetNameにはobj.nameの値が代入される。baseとdiscountには、
+　obj.priceの中にある同じ名前のプロパティ(baseとdiscount)の
+　値が代入される。*/
