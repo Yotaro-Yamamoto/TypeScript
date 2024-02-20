@@ -14,4 +14,4 @@ console.log(obj.meows?.().repeat(3));
 
 //「?.」を付けづにオプショナルメソッドを実行しようとするとコンパイルエラーが発生する。
 //'undefined'の可能性があるオブジェクトを呼び出すことはできない
-//cosole.log(obj,meows().repeat(3));
+//console.log(obj,meows().repeat(3));
