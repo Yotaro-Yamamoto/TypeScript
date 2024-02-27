@@ -7,13 +7,14 @@
 　インスタンスを生成しなくてもクラス名をつけるだけで参照できる。逆に言うと、
 　インスタンスからは参照できない。*/
 class Drink{
+    constructor(public name:string){}
     /*static isDrink(obj:Drink):boolean{
         return obj = Drink;//objが飲み物ならtrueを返す処理;
     }*/
     //静的メソッドの使い道
     /*インスタンスを生成して返す処理を静的メソッドにすると、コンストラクタを使わずに
     　インスタンスを得ることができる。*/
-    static create(name:string):Drink{
+    public static create(name:string):Drink{
         return new Drink(name);
     }
 }
