@@ -17,7 +17,7 @@
 class サブクラス名 extends スーパークラス名{}*/
 //Drinkクラスを継承してCoffeeクラスを定義してみよう。
 class Drink{
-    private _amount:number//分量
+    private _amount:number;//分量
     constructor(amount:number){
         this._amount=amount;
     }
