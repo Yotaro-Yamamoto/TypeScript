@@ -14,3 +14,4 @@ class Drink {
 //nameだけを指定してインスタンスが生成できるようになる。
 const milk = new Drink("牛乳");
 console.log(milk);
+
