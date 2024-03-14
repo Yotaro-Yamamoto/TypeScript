@@ -1,0 +1,28 @@
+その他のユーティリティ型
+そのほかにも次のようなユーティリティ型がある
+ 　　　ユーティリティ型　　　   |      作り出される型　　
+Exclude<T,U>               |T型のプロパティからU型に存在するプロパティを取り除いた型 
+Extract<T,U>.              |T型のプロパティからU型に存在するプロパティだけを残した型
+NonNullable<T>.            |T型からnulとundefinedを取り除いた型
+Parameters<T>.             |型がT型である関数の引数をタプル型として取り出した形
+ConstructionParameters<T>  |T型オブジェクトのコンストラクタの引数をタプル型として取り出した型
+ReturnType<T>.             |型がT型である関数の戻り値の型
+InstanceType<T>.           |T型オブジェクトのコンストラクタの戻り値の型(クラスの場合はクラス名)
+ThisParameter<T>.          |型がT型である関数のthisパラメータの型
+OmitThisParameter<T>       |型がT型である関数からthisパラメータを削除した型
+ThisType<T>.               |指定したオブジェクト内でのthisがTを参照することを示す
+Uppercase<T>.              |文字型のリテラルT型に対し、小文字を大文字に変換した型
+Lowercase<T>.              |文字型のリテラルT型に対し、大文字を小文字に変換した型
+Capitalize<T>.             |文字型のリテラルT型に対し、先頭1文字を大文字にした型
+UnCapitalize<T>.           |文字型のリテラルT型に対し、先頭1文字を小文字にした型
+
+たとえば、ReturnType<T>は、何らかのオブジェクトを返すライブラリ関数を別のパッケージからインポートして利用する際に、
+戻り値を受け取る変数の型注釈に使うと、ライブラリ関数の仕様変更によって戻り値の値が変わった場合に、変数の型も自動的に変わる。
+
+import { createAnimal } from "ライブラリのパス";
+//createAnimal 関数の戻り値型で変数を宣言
+let animal: ReturnType<typeof createAnimal>;
+//動物を生成
+animal = createAnimal();
+
+createAnimal関数の戻り値がAnimal型からCreature型に変わった場合、変数animalの型を書き直す趨勢をしなくて済む。
